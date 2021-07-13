@@ -16,7 +16,8 @@ categoriesRoutes.post("/", (request, response) => {
     try {
         createCategoryService.execute({name, description});
     }catch (e) {
-        return response.status(400).json({error: "Category already exists!"})
+        console.log(e.toString());
+        return response.status(400).json({error: e.toString()})
     }
     return response.status(201).send();
 });
