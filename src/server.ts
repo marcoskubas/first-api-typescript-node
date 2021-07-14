@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use("/categories", categoriesRoutes);
-app.use("/specifications", specificationsRoutes)
+app.use("/specifications", specificationsRoutes);
 
 app.get('/', (request, response) => {
     return response.json({message: 'Hello World'});
