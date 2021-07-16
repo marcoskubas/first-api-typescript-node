@@ -28,6 +28,7 @@ class ImportCategoryUseCase{
                     description
                 });
             }).on("end", () => {
+                fs.promises.unlink(file.path);
                 // @ts-ignore
                 resolve(categories);
             }).on("error", (err) => {
