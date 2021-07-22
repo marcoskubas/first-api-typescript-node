@@ -15,6 +15,7 @@ class CategoriesRepository implements ICategoriesRepository{
             name,
             description
         });
+        console.log('CategoriesRepository async create');
         console.log(category);
         await this.repository.save(category);
     }
