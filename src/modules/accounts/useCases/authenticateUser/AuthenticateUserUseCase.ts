@@ -4,7 +4,7 @@ import { sign } from "jsonwebtoken";
 import {inject, injectable} from "tsyringe";
 
 import {IUsersRepository} from "@modules/accounts/repositories/IUsersRepository";
-import {AppError} from "@errors/AppError";
+import {AppError} from "@shared/errors/AppError";
 
 interface IRequest{
     email: string;
